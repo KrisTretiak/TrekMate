@@ -16,14 +16,16 @@
     </div>
 </head>
 <body>
+    <div th:if="${param.error}">
+        <div class="alert alert-danger">Invalid Email and Password.</div>
+    </div>
     <center th:text="'ERROR: ' + ${error}" style = 'font-weight: bold;' id = "err"></center>
     <center style = 'margin-top: 20px;'>Sorry, we could not complete your request</center>
     <center style = 'margin-top: 37px;' id="tips">TIPS:</center>
     <center style = 'margin-top: 20px;'>Please remember that if you are under 18 you are not allowed to hold a TrekMate account </center>
     <center style = 'margin-top: 20px;'>Email should include an @ symbol as well as .com or .ca</center>
     <center style = 'font-weight: bold;'>
-        <form th:action="'/user/userPage/'+${uid}+'/edit'" method="post">
-            <input type="hidden" name="uiddd" th:value="${uid}" />
+        <form th:action="'userPage/edit'" method="post">
             <button class= "btn btn-primary" type="submit" style = 'margin-bottom: 20px;'>Return to Edit User Page</button> 
         
         </form>

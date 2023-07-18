@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/welcomePages.css">
+    <title>Register for TrekMate</title>
+    <style>
+        body{
+            background-image: url(https://images.unsplash.com/photo-1475359524104-d101d02a042b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1894&q=80);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="logoContent">TrekMate</h2>
+    </header>
+
+    <div id="boxRegister">
+        <div class="register-form">
+            <form method="post" role="form" th:action="@{/register/save}" th:object="${user}">
+            <!--<form class="userRegister" action="/signup" method="post">-->
+                <input class="userElement"  
+                id="firstName" 
+                name="firstName" 
+                placeholder="Enter first name"  
+                th:field="*{firstName}"
+                type="text"
+                />
+                <p th:errors="*{firstName}" class="text-danger"
+                th:if="${#fields.hasErrors('firstName')}">
+             </p>
+             
+                <input type="text" class="userElement" 
+                id="lastName" 
+                name="lastName" 
+                placeholder="Enter last name" 
+                th:field="*{lastName}"
+                />
+                <p th:errors="*{lastName}" class="text-danger"
+                th:if="${#fields.hasErrors('lastName')}">
+             </p>
+                <input type="text" class="userElement" 
+                id="age" 
+                name="age"
+                placeholder="Please enter your age, must be over 18" 
+                th:field="*{age}"
+                />
+                <p th:errors="*{age}" class="text-danger"
+                th:if="${#fields.hasErrors('age')}">
+               </p>
+
+                <input type="text" class="userElement" id="location" 
+                name="location" placeholder="Enter your location" th:field="*{location}"
+                />
+                 <p th:errors="*{location}" class="text-danger"
+                th:if="${#fields.hasErrors('location')}">
+             </p>
+                <input type="email" class="userElement" id="email" 
+                name="email" placeholder="Enter your Email" th:field="*{email}"> 
+                <p th:errors="*{email}" class="text-danger"
+                th:if="${#fields.hasErrors('email')}">
+             </p>
+                <input type="password" class="userElement"  id="password" 
+                name="password" placeholder="New Password"  th:field="*{password}"> 
+                <p th:errors="*{password}" class="text-danger"
+                th:if="${#fields.hasErrors('password')}">
+             </p><br>
+                <label for="difficulty"> How experienced at hiking are you?</label>
+                <input type="range" id="difficulty" name="difficulty" min="1" max="10" th:field="*{difficulty}">
+
+
+
+                <button type="submit" class="small_login">Register</button>
+            </form>
+            <a button type="button" class="return" aria-current="page" th:href="@{/LandingPage}">Go back</a>
+        </div>
+    </div>
+</body>
+</html>

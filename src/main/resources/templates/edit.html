@@ -17,7 +17,8 @@
 </head>
 <body>
     <h1 class="text-center mt-5 mb-4">Edit Profile</h1>
-    <form th:action="'/user/userPage/'+${user.uid}+'/edited'" method="post">
+
+    <form method="post" th:action="'/userPage/edited'" th:object="${user}">
 
         <div class="mb-3">
             <center>
@@ -61,10 +62,6 @@
                 th:value="${user.age}" placeholder="Age">
             </center>
         </div>
-        <!-- Submit Button -->
-        <input type="hidden" name="idddd" th:value="${user.uid}" />
-
-        <input type="hidden" name="password" th:value="${user.password}" />
 
         <div class="d-grid gap-2">
             <center>

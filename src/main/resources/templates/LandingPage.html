@@ -6,23 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TrekMate</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="css/LandingPage.css">
+	<link rel="stylesheet" type="text/css" href="/css/LandingPage.css">
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <link rel="icon" href="img/logo1.jpg" type="image/gif/jpg">
+    <link rel="icon" href="/img/logo1.png" type="image/gif/jpg">
 </head>
 <body>
+
     <div class="container-fluid">
 		<div class="row">
             
             <!-- The nav bar -->
 			<div class="col-md-12 navbar">
-				<a href="#" class="logo"><img src="img/logo1trans.png" alt=""></a>
+				<a href="#" class="logo"><img src="/img/logo1trans.png" alt=""></a>
 				<ul class="nav">
 					<li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
                     <li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
 					<!-- INPUT connect to login page here -->
-                    <a href="welcome.html"><button class="btn btn-success ms-lg-3">Login</button></a>
+                    <a button class="btn btn-success ms-lg-3" aria-current="page" th:href="@{/login}">Login</button></a>
 				</ul>
 			</div>
             <!-- end of nav -->
@@ -38,8 +39,8 @@
                                 <h1 class="display-4 text-white">TrekMate</h1>
                                 <h5 class="text-white my-3">Sign up now!</h5>
                                 <!-- INPUT connect to login page and sign UP page here -->
-                                <a href="welcome.html" class="btn me-2 btn-success">Login</a>
-                                <a href="register.html" class="btn btn-outline-light">Sign up</a>
+                                <a class="btn me-2 btn-success" aria-current="page" th:href="@{/login}">Login</a>
+                                <a class="btn btn-outline-light" aria-current="page" th:href="@{/register}">Sign up</a>
 			      	        </div>
 			        </div>
 
@@ -48,8 +49,8 @@
                             <h1>Connect With Friends!</h1>
                             <p>Sign up now</p>
                             <!-- INPUT connect to login page and sign UP page here -->
-                            <a href="welcome.html" class="btn me-2 btn-success">Login</a>
-                            <a href="register.html" class="btn btn-outline-light">Sign up</a>
+                            <a class="btn me-2 btn-success" aria-current="page" th:href="@{/login}">Login</a>
+                            <a class="btn btn-outline-light" aria-current="page" th:href="@{/register}">Sign up</a>
 			      	    </div>
 			        </div>
                     <div class="carousel-item">
@@ -57,8 +58,8 @@
                             <h1>Find New Trails!</h1>
                             <p>Sign up now</p>
                             <!-- INPUT connect to login page and sign UP page here -->
-                            <a href="welcome.html" class="btn me-2 btn-success">Login</a>
-                            <a href="register.html" class="btn btn-outline-light">Sign up</a>
+                            <a class="btn me-2 btn-success" aria-current="page" th:href="@{/login}">Login</a>
+                            <a class="btn btn-outline-light" aria-current="page" th:href="@{/register}">Sign up</a>
                             <p></p>
                         </div>
                     </div>
@@ -67,8 +68,8 @@
                             <h1>Track Your Progress!</h1>
                             <p>Sign up now</p>
                             <!-- INPUT connect to login page and sign UP page here -->
-                            <a href="welcome.html" class="btn me-2 btn-success">Login</a>
-                            <a href="register.html" class="btn btn-outline-light">Sign up</a>
+                            <a class="btn me-2 btn-success" aria-current="page" th:href="@{/login}">Login</a>
+                            <a class="btn btn-outline-light" aria-current="page" th:href="@{/register}">Sign up</a>
                             <p></p>
                         </div>
                     </div>
@@ -126,37 +127,37 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="service card-effect bounceInUp">
                         <div class="iconbox">
-                            <i class='bx bxs-check-shield'><img src="img/maps.png" alt=""></i>
+                            <i class='bx bxs-check-shield'><img src="/img/maps.png" alt=""></i>
 
                         </div>
                         <h5 class="mt-4 mb-2">Google Maps API</h5>
-                        <p>This API gives you the option to update your location status for safety purposes and search for new trails at your skill level.</p>
+                        <p>This API gives you the option update your location for safety purposes and search for new trails at your level.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <div class="service card-effect">
                         <div class="iconbox">
-                            <i class='bx bxs-comment-detail'><img src="img/weather.png" alt=""></i>
+                            <i class='bx bxs-comment-detail'><img src="/img/weather.png" alt=""></i>
                         </div>
                         <h5 class="mt-4 mb-2">Weather API</h5>
-                        <p>The Weather API will let you know what the current weather conditions look like and if its safe for hiking during the time of your scheduled hike.</p>
+                        <p>The Weather API with let you know what the current weather conditions look like and if its safe for hiking.</p>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-sm-6">
                     <div class="service card-effect">
                         <div class="iconbox">
-                            <i class='bx bxs-comment-detail'><img src="img/calender.png" alt=""></i>
+                            <i class='bx bxs-comment-detail'><img src="/img/calender.png" alt=""></i>
                         </div>
                         <h5 class="mt-4 mb-2">Google Calender API</h5>
-                        <p> This Calender API is used to schedule and create hiking events. TrekMate allows your so schedule solo hikes or in group hikes with friends and family.</p>
+                        <p> This API is used to schedule/create hiking events alone or with friends and family.</p>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-sm-6">
                     <div class="service card-effect">
                         <div class="iconbox">
-                            <i class='bx bxs-comment-detail'><img src="img/followers.png" alt=""></i>
+                            <i class='bx bxs-comment-detail'><img src="/img/followers.png" alt=""></i>
                         </div>
                         <h5 class="mt-4 mb-2">Follow Friends</h5>
                         <p> TrekMate allows you to follow your friends to see what they’re up to.</p>
@@ -166,7 +167,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="service card-effect">
                         <div class="iconbox">
-                            <i class='bx bxs-comment-detail'><img src="img/post.png" alt=""></i>
+                            <i class='bx bxs-comment-detail'><img src="/img/post.png" alt=""></i>
                         </div>
                         <h5 class="mt-4 mb-2">Public Posts</h5>
                         <p> You can log your recent hikes as a public post to share with other TrekMate users.</p>
@@ -177,10 +178,10 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="service card-effect">
                         <div class="iconbox">
-                            <i class='bx bxs-comment-detail'><img src="img/warning.png" alt=""></i>
+                            <i class='bx bxs-comment-detail'><img src="/img/warning.png" alt=""></i>
                         </div>
                         <h5 class="mt-4 mb-2">Environmental Warnings</h5>
-                        <p> Users will recieve warnings such as bear sightings, obstruction on trails, and how crowded a trail is.</p>
+                        <p> Users will recieve warnings such as bear sightings, obstruction on trails, and how busy the area is.</p>
                     </div>
                 </div>
                    
@@ -200,7 +201,7 @@
             <div class="container">
                 <div class="row gy-4">
                     <div class="col-lg-4">
-                        <img class="logo" src="img/logo-white.svg" alt="">
+                        <img class="logo" src="/img/logo-white.png" alt="">
                     </div>
                    
                     

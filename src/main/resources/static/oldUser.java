@@ -1,4 +1,4 @@
-package com.example.demo3.models;
+/*package com.example.demo3.models;
 
 import jakarta.persistence.*;
 
@@ -7,12 +7,12 @@ import jakarta.persistence.*;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int uid;
+    //private int uid;
     private int age;
     private String location;
-    private String name;
-    private String email;
-    private String password;
+    //private String name;
+    //private String email;
+    //private String password;
     private String difficulty;
 
     public User() {
@@ -85,4 +85,4 @@ public class User {
     }
     
     
-}
+} */

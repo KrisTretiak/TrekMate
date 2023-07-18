@@ -1,4 +1,4 @@
-package com.example.demo3.controllers;
+/*package com.example.demo3.controllers;
 
 import java.util.List;
 import java.util.Map;
@@ -139,7 +139,7 @@ public class UsersController {
         model.addAttribute("us", u);
         return "redirect:/edit.html/{uid}";
     } */
-
+/* 
      @GetMapping("/user/adminView")
     public String getAdmin(Model model){
         System.out.println("Getting all students");
@@ -207,7 +207,7 @@ public class UsersController {
             return "user/errorPage";
         } 
         int newAge = Integer.parseInt(newuser.get("age"));
-
+*/
         /*if (newAge < 18){
             String error = "Invalid age (under 18)";
             model.addAttribute("error", error);
@@ -215,7 +215,7 @@ public class UsersController {
             return "user/errorPage";
         } */
 
-         if (newEmail.toLowerCase().indexOf(".com") == -1 && newEmail.toLowerCase().indexOf(".ca") == -1 && newEmail.toLowerCase().indexOf("@") == -1) {
+         /*if (newEmail.toLowerCase().indexOf(".com") == -1 && newEmail.toLowerCase().indexOf(".ca") == -1 && newEmail.toLowerCase().indexOf("@") == -1) {
             String error = "Invalid email input (no @ symbol, .com or .ca)";
             model.addAttribute("error", error);
             model.addAttribute("uid", tempId);
@@ -241,6 +241,6 @@ public class UsersController {
         model.addAttribute("user", us);
 
         return "users/edited";
-    } 
+    }  
 
-}
+}*/

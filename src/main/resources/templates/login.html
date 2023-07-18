@@ -25,17 +25,41 @@
     <div id="boxLogin">
         <div class="buttons">
             <button type="button" class="loginButton">Login</button><br>
+            
             <button type="button" onclick="window.location.href='/register.html'" class="registerButton">Register</button>
+        </div>
+
+        <div th:if="${param.logout}">
+            <div class="alert alert-success">You have been logged out.</div>
+        </div>
+        <div th:if="${param.error}">
+            <div class="alert alert-danger">Invalid Email and Password.</div>
         </div>
 
         <div class="login-form">
             <div class="userLogin">
-                <form class="userLogin" action="login" method="post">
-                    <input type="text" class="userElement" name="name" autocomplete="username" placeholder="Name">
-                    <input type="password" class="userElement" name="password" autocomplete="current-password" placeholder="Password">
+                <form
+                            method="post"
+                            th:action="@{/login}"
+                            role="form" >  
+ 
+                    <label for="username" class="control-label">Email *</label>
+                    <input type="text"
+                           id="username"
+                           name="username"
+                           class="userElement" 
+                           placeholder="Email"
+                    />
+                    <label for="password" class="control-label">Password *</label>
+                    <input type="password"
+                           id="password"
+                           name="password"
+                           class="userElement" 
+                           placeholder="Password"
+                    />
                     <button type="submit" class="small_login">Login</button>
-                    <button type="button" class="return">Go back</button>
                 </form>
+                 <button type="button" class="return" aria-current="page" th:href="@{/LandingPage}">Go back</button>
             </div>
         </div>
     </div>
